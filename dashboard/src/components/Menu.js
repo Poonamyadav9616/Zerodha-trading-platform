@@ -13,7 +13,7 @@ const Menu = ({user}) => {
   const handleLogOut = async () => {
     try {
       await api.post("/logout");
-      window.location.href = process.env.REACT_APP_DASHBOARD_REDIRECT_URL;
+      window.location.href = "https://zerodha-app-7rum.onrender.com";
     } catch(err) {
       console.log(err);
       alert("Log Out failled");
