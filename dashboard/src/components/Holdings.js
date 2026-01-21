@@ -1,5 +1,5 @@
 // import { holdings } from "../data/data";
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import { VerticalGraph } from "./VerticalGraph";
 
@@ -8,7 +8,7 @@ const Holdings = () => {
 const [allHoldings, setAllHoldings] = useState([]);
 
 useEffect(() => {
-      axios.get("http://localhost:3002/allHoldings").then((res) => {
+      api.get("/allHoldings").then((res) => {
         setAllHoldings(res.data);
       })
 }, []);

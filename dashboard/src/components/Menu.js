@@ -13,7 +13,7 @@ const Menu = ({user}) => {
   const handleLogOut = async () => {
     try {
       await api.post("/logout");
-      window.location.href = "http://localhost:3000";
+      window.location.href = REACT_DASHBOARD_REDIRECT_URL;
     } catch(err) {
       console.log(err);
       alert("Log Out failled");

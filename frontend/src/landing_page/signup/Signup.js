@@ -39,7 +39,7 @@ function Signup() {
             email: values.email,
             password: values.password
         });
-      window.location.href = "http://localhost:3001";
+      window.location.href = process.env.REACT_APP_REDIRECT_URL;
         } catch(err) {
           console.log(err.response.data.error)
           setMsg(err.response.data.error);
